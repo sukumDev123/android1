@@ -15,6 +15,7 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page);
+
         hellopage = findViewById(R.id.hellopage);
         btnmain = findViewById(R.id.btnmain);
         hellopage.setOnClickListener(this);
@@ -28,6 +29,8 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(PageActivity.this,HelloWorldActivity.class);
             startActivity(intent);
         }else if(view == btnmain){
+            Intent intent2 = new Intent(PageActivity.this,MainActivity.class);
+            startActivity(intent2);
 
         }
     }
