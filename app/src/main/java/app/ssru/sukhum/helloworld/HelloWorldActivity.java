@@ -9,11 +9,11 @@ import android.widget.ImageView;
 
 public class HelloWorldActivity extends AppCompatActivity {
 
-    private int res[] = { R.drawable.dice_one,
+    private int res[] = { R.drawable.dice_one ,
             R.drawable.dice_two ,
-            R.drawable.dice_three,
-            R.drawable.dice_four,
-            R.drawable.dice_five,
+            R.drawable.dice_three ,
+            R.drawable.dice_four ,
+            R.drawable.dice_five ,
             R.drawable.dice_sex };
     private Button btnRandom;
     private ImageView ivDice;
@@ -25,7 +25,6 @@ public class HelloWorldActivity extends AppCompatActivity {
 
         btnRandom = findViewById(R.id.btnRandom);
         ivDice = findViewById(R.id.ivDice);
-
         btnRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
