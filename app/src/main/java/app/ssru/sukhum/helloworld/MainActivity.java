@@ -78,9 +78,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(id == radioMul.getId()){
             result_value = mulFunction(x,y);
         }else if(id == radioDivide.getId()){
-            result_value = divFunction(x,y);
+            result_value = divFunction(x,y) ;
         }
-        result.setText(String.valueOf(result_value));
+        String re = String.valueOf(result_value);
+        result.setText(re);
     }
 
 
@@ -108,7 +109,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return  x * y;
     }
     private int divFunction (int x , int y) {
-        return  x / y;
+        if(y != 0) {
+            return  x / y;
+
+        }else{
+            return  0;
+        }
     }
 
 }
