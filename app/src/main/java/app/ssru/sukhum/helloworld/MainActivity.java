@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void cal() {
+        boolean divide = false;
         int id = radioGroupS.getCheckedRadioButtonId();
         int result_value = 0;
         int x = getValueX();
@@ -78,9 +79,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(id == radioMul.getId()){
             result_value = mulFunction(x,y);
         }else if(id == radioDivide.getId()){
+            if(x == 0 && y == 0) {
+                divide = true;
+            }
             result_value = divFunction(x,y) ;
         }
-        String re = String.valueOf(result_value);
+        String re = null;
+        if(divide){
+            re = "INFINITY";
+        }else{
+            re = String.valueOf(result_value);
+
+        }
         result.setText(re);
     }
 
