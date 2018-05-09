@@ -50,7 +50,7 @@ public class HelloWorldActivity extends AppCompatActivity {
 
                 }
             }
-        }, 150);
+        },  150);
      }
 
 }
